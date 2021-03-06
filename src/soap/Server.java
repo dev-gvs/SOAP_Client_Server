@@ -21,14 +21,10 @@ public class Server implements IServer {
             System.out.println("Got (" + x + ", " + secondArg + ")");
             if (x <= 4) {
                 double a = secondArg;
-                double y1 = ((a * a) / (x * x));
-                double y2 = (6 * x);
-                y = (y1 + y2);
+                y = ((a * a) / (x * x)) + (6 * x);
             } else {
                 double b = secondArg;
-                double y1 = (b * b);
-                double y2 = ((4 + x) * (4 + x));
-                y = (y1 * y2);
+                y = (b * b) * ((4 + x) * (4 + x));  
             }
             if ((Double.isNaN(y)) || Double.isInfinite(y)) {
                 return null;
